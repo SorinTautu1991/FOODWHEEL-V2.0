@@ -10,14 +10,6 @@ export function AppWrapper({ children }) {
   const [queryParams, setQueryParams] = useState('chicken');
   const [favourites, setFavourites] = useState([]);
 
-  // useEffect(() => {
-  //   async function fetchDataDB() {
-  //     const d = await getData();
-  //     setFavourites(d);
-  //   }
-  //   fetchDataDB();
-  // }, [favourites]);
-
   useEffect(() => {
     async function fetchDataDB() {
       const d = await getData();
