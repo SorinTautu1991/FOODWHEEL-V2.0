@@ -6,8 +6,8 @@ export async function getRecipes(term) {
     params: {
       type: 'public',
       q: term,
-      app_id: process.env.NEXT_PUBLIC_EDAMAM_APP_ID,
-      app_key: process.env.NEXT_PUBLIC_EDAMAM_APP_KEY,
+      app_id: process.env.EDAMAM_APP_ID,
+      app_key: process.env.EDAMAM_APP_KEY,
     },
   });
   const result = await res.data.hits;
@@ -19,8 +19,8 @@ export async function getSpecificRecipe(id) {
     headers: { 'Content-Type': 'application/json' },
     params: {
       type: 'public',
-      app_id: process.env.NEXT_PUBLIC_EDAMAM_APP_ID,
-      app_key: process.env.NEXT_PUBLIC_EDAMAM_APP_KEY,
+      app_id: process.env.EDAMAM_APP_ID,
+      app_key: process.env.EDAMAM_APP_KEY,
     },
   });
   const results = await res.data;
